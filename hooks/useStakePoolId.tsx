@@ -6,9 +6,7 @@ import { useStakePoolMetadataCtx } from 'providers/StakePoolMetadataProvider'
 
 export const useStakePoolId = () => {
   const stakePoolMetadata = useStakePoolMetadataCtx()
-  const {
-    query: { stakePoolId },
-  } = useRouter()
+  const stakePoolId = "2ksarEnXXzGQ4nQfw8k3P944VmjoUe3gLURBRrSEy5xm"
 
   return useQuery(
     [
