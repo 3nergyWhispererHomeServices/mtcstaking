@@ -33,13 +33,10 @@ export const HeroLarge: React.FC = () => {
             className="text-4xl text-light-0"
             style={{ color: config?.colors?.fontColor }}
           >
-            {config?.displayName ?? shortPubKey(stakePoolId)}
+            Meta Tune Club
           </div>
           <div className="text-lg text-medium-3">
-            {config?.description ??
-              `Stake your token(s) to earn rewards from various reward mechanisms including tokens, merchandise, redeemable rewards by the ${
-                config?.displayName ?? shortPubKey(stakePoolId)
-              } pool.`}
+            Stake your Meta Tune Club NFTs to earn $TUNE tokens. $TUNE tokens can be used for home service discounts and raffles.
           </div>
           <StakePoolConfig />
           <FeeInfo />

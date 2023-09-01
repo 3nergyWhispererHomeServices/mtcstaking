@@ -48,9 +48,7 @@ function StakePoolHome(props: { stakePoolMetadataName: string | null }) {
   const rewardDistributorData = useRewardDistributorData()
   const stakedTokenDatas = useStakedTokenDatas()
   const [pane, setPane] = useState<PANE_OPTIONS>('dashboard')
-  const stakePoolDisplayName = props.stakePoolMetadataName
-    ? props.stakePoolMetadataName.replace(' Staking', '') + ' Staking'
-    : 'OpenCardinal NFT Staking'
+  const stakePoolDisplayName = 'Meta Tune Club'
 
   const { data: stakePoolMetadata } = useStakePoolMetadataCtx()
 
@@ -67,7 +65,7 @@ function StakePoolHome(props: { stakePoolMetadataName: string | null }) {
     return (
       <>
         <Head>
-          <title>{stakePoolDisplayName}</title>
+          <title>Meta Tune Club</title>
           <meta name="title" content={stakePoolDisplayName} />
           <meta
             name="description"
@@ -75,8 +73,8 @@ function StakePoolHome(props: { stakePoolMetadataName: string | null }) {
               props.stakePoolMetadataName
                 ? 'Stake your ' +
                   props.stakePoolMetadataName.replace(' Staking', '') +
-                  ' NFTs powered by Cardinal Staking'
-                : 'Stake your Solana NFTs powered by Cardinal Staking'
+                  ' NFTs powered by Meta Tune Club'
+                : 'Plug In your Meta Tune Club NFTs powered by Meta Tune Club'
             }
           />
           <meta name="image" content="https://stake.cardinal.so/preview.png" />
@@ -138,25 +136,21 @@ function StakePoolHome(props: { stakePoolMetadataName: string | null }) {
       style={{
         background: tryColor(stakePoolMetadata?.colors?.primary),
         backgroundSize: 'cover',
-        backgroundImage: `url(${stakePoolMetadata?.backgroundImage})`,
+        backgroundImage: `url(ipfs://bafybeihjmgkwkiw3fvjxjqlmgac7hrvlovnlo7gxpxebekdbxaxwrrnbtq)`,
       }}
     >
       <Head>
-        <title>{stakePoolDisplayName}</title>
-        <meta name="title" content={stakePoolDisplayName} />
+        <title>Meta Tune Club</title>
+        <meta name="title" content='Meta Tune Club' />
         <meta
           name="description"
           content={
-            props.stakePoolMetadataName
-              ? 'Stake your ' +
-                props.stakePoolMetadataName.replace(' Staking', '') +
-                ' NFTs powered by Cardinal Staking'
-              : 'Stake your Solana NFTs powered by Cardinal Staking'
+           "Plug in your Meta Tune Club NFTs to earn $TUNE tokens."
           }
         />
         {/* <meta name="image" content="https://stake.cardinal.so/preview.png" />
         <meta name="og:image" content="https://stake.cardinal.so/preview.png" /> */}
-        <link rel="icon" href={stakePoolMetadata?.imageUrl ?? `/favicon.ico`} />
+        <link rel="icon" href="websiteLogo.gif" />
         <script
           defer
           data-domain="stake.cardinal.so"
@@ -221,11 +215,7 @@ function StakePoolHome(props: { stakePoolMetadataName: string | null }) {
           }[pane]
         }
       </div>
-      {!stakePoolMetadata?.hideFooter ? (
-        <Footer bgColor={tryColor(stakePoolMetadata?.colors?.primary)} />
-      ) : (
-        <div className="h-24"></div>
-      )}
+      
     </div>
   )
 }
