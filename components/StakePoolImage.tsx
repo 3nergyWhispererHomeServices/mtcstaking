@@ -1,5 +1,3 @@
-import { ButtonSmall } from 'common/ButtonSmall'
-import { url } from 'inspector'
 import { useStakePoolMetadataCtx } from 'providers/StakePoolMetadataProvider'
 
 export const StakePoolImage = ({ onClick }: { onClick?: () => void }) => {

@@ -1,5 +1,4 @@
 import { tryColor } from 'common/colors'
-import { Footer } from 'common/Footer'
 import { FooterSlim } from 'common/FooterSlim'
 import { Header } from 'common/Header'
 import { HeroLarge } from 'common/HeroLarge'
